@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Expense Tracker</title>
+    <meta charset="UTF-8">
+    <title>Expense Tracker Web Application</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<h1>Expense Tracker</h1>
+    <div class="app">
+        <h1>💰 Expense Tracker</h1>
+        <p class="subtitle">Track your income & expenses easily</p>
 
-<div class="container">
-    <h2>Balance</h2>
-    <h3 id="balance">₹0</h3>
+        <!-- Balance -->
+        <div class="balance-card">
+            <h3>Total Balance</h3>
+            <h2 id="balance">₹9,500</h2>
+        </div>
 
-    <form id="form">
-        <input type="text" id="text" placeholder="Detail likho">
-        <input type="number" id="amount" placeholder="Amount likho">
-        <button>Add</button>
-    </form>
+        <!-- Form -->
+        <div class="form-card">
+            <input type="text" placeholder="Transaction Title">
+            <input type="number" placeholder="Amount">
+            <button>Add Transaction</button>
+        </div>
 
-    <ul id="list"></ul>
-</div>
+        <!-- Transaction List -->
+        <div class="list-card">
+            <h3>Transaction History</h3>
+            <ul class="transaction-list">
 
-<script src="script.js"></script>
+                <li class="transaction income-item">
+                    <span>Salary</span>
+                    <div>
+                        <span class="income">+₹10,000</span>
+                        <button class="delete-btn">✖</button>
+                    </div>
+                </li>
+
+                <li class="transaction expense-item">
+                    <span>Groceries</span>
+                    <div>
+                        <span class="expense">-₹500</span>
+                        <button class="delete-btn">✖</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
